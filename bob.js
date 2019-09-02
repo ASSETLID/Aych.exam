@@ -24,11 +24,10 @@ $(document).ready(function(){
   }
   
   const sendToALice = async () => {
-    var val = $("#amount").val() || 0;
-    val = parseInt(val);
-    console.log(val);
+    var formAmount = $("#amount").val() || 0;
+    formAmount = parseInt(formAmount);
 
-    if(val > bobBalance){
+    if(formAmount > bobBalance){
       alert("Not Enough balance")
       return;
     }
