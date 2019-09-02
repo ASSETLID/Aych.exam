@@ -12,4 +12,11 @@ Complete the files `bob.js` and `alice.js`.
 
 Documentation of the nocust library: [http://docs.liquidity.network](http://docs.liquidity.network)
 
+To get some test funds (Rinkeby) run the command:
+```
+curl -X POST --data '{"address": "<Public key>"}' -H 'Content-Type: application/json' https://rinkeby-faucet.liquidity.network
+```
+
+Replace `<Public key>` by your Ethereum address to receive 0.0001 commit-chain ETH (The address needs to be registered with commit chain).
+
 **Good luck!**
