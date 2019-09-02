@@ -24,12 +24,7 @@ $(document).ready(function(){
   }
 
   async function updateBalance() {
-    try {
-      const balance = await nocustManagerAlice.getNOCUSTBalance(ALICE_PUB);
-      $("#alice-balance").text('Balance: ' + balance.toFixed());
-    } catch(err) {
-      console.err("Could not fetch balance", err);
-    }
+    // TODO!
   }
 
   async function main() {
@@ -38,7 +33,7 @@ $(document).ready(function(){
     // Periodically fetch balances
     setInterval(updateBalance, 1500)
   }
-
+  
   main()
 
 });

@@ -17,6 +17,3 @@ const BOB_PRIV =  wallets[0].privateKey;
 const ALICE_PUB = wallets[1].address;
 const ALICE_PRIV = wallets[1].privateKey;
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}

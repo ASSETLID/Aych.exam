@@ -14,36 +14,17 @@ $(document).ready(function(){
 
   // Register bob's address with the commit-chain
   async function register() {
-    try {
-      await nocustManagerBob.registerAddress(BOB_PUB);
-      console.log("Bob is ready to receive transfers !");
-    }
-    catch(err){
-        console.error("Could not register", err);
-      }
+    // TODO !
   }
   
   const sendToALice = async () => {
-    var val = $("#amount").val() || 0;
-    val = parseInt(val);
-    console.log(val);
-
-    if(val > bobBalance){
-      alert("Not Enough balance")
-      return;
-    }
+    var formAmount = $("#amount").val() || 0;
+    formAmount = parseInt(formAmount);
 
     $("#send-button").prop('disabled', true);
     $("#send-button").text('⌛ Sending...');
     
-    // Send commit-chain funds to Alice  
-    const txId = await nocustManagerBob.sendTransaction({
-        to: ALICE_PUB,
-        amount: val,
-        from: BOB_PUB,
-     });
-  
-    console.log("Transfer to Alice sent ! Transaction ID: ", txId);
+    // TODO!
 
     $("#send-button").prop('disabled', false);
     $("#send-button").text('🎁 Send to Alice');
@@ -52,12 +33,7 @@ $(document).ready(function(){
 
   
   async function updateBalance() {
-    try {
-      bobBalance = await nocustManagerBob.getNOCUSTBalance(BOB_PUB);
-      $("#bob-balance").text('Balance: ' + bobBalance.toFixed());
-    } catch(err) {
-      console.error("Could not fetch balance", err);
-    }
+    // TODO!
   }
   
   async function main() {
