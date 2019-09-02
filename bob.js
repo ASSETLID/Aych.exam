@@ -26,7 +26,6 @@ $(document).ready(function(){
   const sendToALice = async () => {
     var val = $("#amount").val() || 0;
     val = parseInt(val);
-    console.log(val);
 
     if(val > bobBalance){
       alert("Not Enough balance")
